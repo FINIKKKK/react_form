@@ -1,8 +1,11 @@
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { Input } from "../Input";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { FormProvider, useForm } from "react-hook-form";
+
+import { Input } from "../Input";
 import { FormScheme } from "../../utils/validation";
+
+import ss from './Form.module.scss'
 
 interface FormProps {
   setIsVisible: (value: boolean) => void;
@@ -22,11 +25,10 @@ export const Form: React.FC<FormProps> = ({ setIsVisible }) => {
   };
 
   return (
-    <div className="form__wrapper">
+    <div className={ss.form__wrapper}>
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="form">
+        <form onSubmit={form.handleSubmit(onSubmit)} className={ss.form}>
           <svg
-            className="close"
             onClick={() =>setIsVisible(false)}
             width="9"
             height="9"

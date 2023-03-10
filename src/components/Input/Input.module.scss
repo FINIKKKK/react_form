@@ -1,0 +1,30 @@
+.input {
+  position: relative;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+  textarea {
+    height: 130px !important;
+    resize: none;
+  }
+  span {
+    font-size: 10px;
+  }
+  .clear {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 11px;
+  }
+}
