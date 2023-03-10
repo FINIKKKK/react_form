@@ -27,7 +27,7 @@ export const Form: React.FC<FormProps> = ({ setIsVisible }) => {
         <form onSubmit={form.handleSubmit(onSubmit)} className="form">
           <svg
             className="close"
-            onClick={() => setIsVisible(false)}
+            onClick={() =>setIsVisible(false)}
             width="9"
             height="9"
             viewBox="0 0 9 9"

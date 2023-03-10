@@ -18,8 +18,7 @@ export const Input: React.FC<InputProps> = ({
     formState: { errors },
   } = useFormContext();
   const [inputName, setInputName] = React.useState("");
-  // @ts-ignore
-  const error = errors[name]?.message;
+  const error = errors[name]?.message as string;
 
   return (
     <div className="input">
@@ -47,10 +46,7 @@ export const Input: React.FC<InputProps> = ({
           type="text"
         />
       )}
-      {error && (
-        // @ts-ignore
-        <span>{error}</span>
-      )}
+      <span>{error}</span>
     </div>
   );
 };
